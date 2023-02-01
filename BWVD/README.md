@@ -2,7 +2,7 @@
 
 # How To Compile
 
-* Open video_player.c and go to line 99 and change "C:\video\fall_guys.mp4" to where ever you put the "fall_guys.mp4" file.
+* Run the make command in msys2
 
 # Credits
 
