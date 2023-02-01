@@ -1,17 +1,9 @@
-OBJS	= main.o
-SOURCE	= main.c
-HEADER	= 
-OUT	= BouncyWindow.exe
-CC	 = gcc
-FLAGS	 = -g -c -Wall
-LFLAGS	 = 
+CC = gcc
+CFLAGS = -Wall -Wextra -g -I/usr/local/include/SDL2
+LDFLAGS = -lSDL2 -lSDL2_mixer
 
-all: $(OBJS)
-	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
-
-main.o: main.c
-	$(CC) $(FLAGS) main.c 
-
+video_player: video_player.c
+	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
 clean:
-	rm -f $(OBJS) $(OUT)
+	rm -f video_player
