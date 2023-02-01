@@ -1,15 +1,17 @@
-CXX = g++
-CXXFLAGS = -Wall -Werror -Wextra -pedantic -std=c++17 -g -fsanitize=address
-LDFLAGS =  -fsanitize=address
+OBJS	= main.o
+SOURCE	= main.c
+HEADER	= 
+OUT	= BouncyWindow.exe
+CC	 = gcc
+FLAGS	 = -g -c -Wall
+LFLAGS	 = 
 
-SRC = 
-OBJ = $(SRC:.cc=.o)
-EXEC = main
+all: $(OBJS)
+	$(CC) -g $(OBJS) -o $(OUT) $(LFLAGS)
 
-all: $(EXEC)
+main.o: main.c
+	$(CC) $(FLAGS) main.c 
 
-$(EXEC): $(OBJ)
-	$(CXX) $(LDFLAGS) -o $@ $(OBJ) $(LBLIBS)
 
 clean:
-	rm -rf $(OBJ) $(EXEC)
+	rm -f $(OBJS) $(OUT)

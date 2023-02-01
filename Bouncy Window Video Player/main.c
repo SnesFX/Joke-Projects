@@ -1,4 +1,4 @@
-#include <SDL2/SDL.h>
+#include <SDL2/SDL.h>    // for SDL2
 #include <SDL2/SDL_video.h>
 #include <SDL2/SDL_render.h>
 #include <SDL2/SDL_timer.h>
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     }
 
     Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
-    Mix_Music *music = Mix_LoadMUS("C:\Users\Ty_1991\Downloads\memes\fall_guys.mp3");
+    Mix_Music *music = Mix_LoadMUS("path/to/video.mp4");
     if (!music) {
         SDL_Log("Failed to load video: %s", Mix_GetError());
         return 1;
