@@ -1,12 +1,10 @@
-#include <windows.h>
 #include <stdio.h>
+#include <windows.h>
 
 int main()
 {
-    // Initiate system shutdown
-    if (!ExitWindowsEx(EWX_SHUTDOWN | EWX_FORCE, SHTDN_REASON_MAJOR_OPERATINGSYSTEM | SHTDN_REASON_MINOR_UPGRADE | SHTDN_REASON_FLAG_PLANNED)) {
-        printf("Shutdown failed");
-    }
-
+    printf("Shutting down the computer in 5 seconds...\n");
+    Sleep(5000);
+    ExitWindowsEx(EWX_SHUTDOWN | EWX_FORCE, 0);
     return 0;
 }
