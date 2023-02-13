@@ -1,5 +1,5 @@
 program: bsod.c
-	gcc -o program bsod.c
+	gcc bsod.c -o InstaBSOD -lntdll
 
 clean:
-	rm -f program
+	rm -f InstaBSOD
