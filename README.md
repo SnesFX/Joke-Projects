@@ -4,7 +4,7 @@
 
 # How to compile everything
 
-* Literally everything was made in C so just use [MSYS2](https://www.msys2.org/)
+* Literally everything was made in C so just use [MSYS2](https://www.msys2.org/) if you're on windows.
 
 # Credits
 
